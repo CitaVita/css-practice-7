@@ -1,3 +1,9 @@
+@font-face {
+  font-family: roboto;
+  src: url(C:\Users\mcj22\OneDrive\Desktop\Work\font\Roboto-LightItalic.ttf)
+}
+
+
 html {
   max-width: 720px;
 }
@@ -5,6 +11,7 @@ html {
 body {
   margin: 32px;
   background: #fff;
+  font-family: roboto;
 }
 
 main,
