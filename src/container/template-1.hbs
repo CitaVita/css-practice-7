@@ -19,9 +19,11 @@
     </div>
     <div class="page_block">
         <main class="row g-0 plans">
-                <div class="col plans_card">test</div>
-                <div class="col plans_card">test</div>
-                <div class="col  plans_card">test</div>
+            {{#each plans}}
+                <div class="col plans_card">
+                    {{> card data=this}}
+                </div>     
+                {{/each}}
         </main>
     </div>
         <div class="page_block">
