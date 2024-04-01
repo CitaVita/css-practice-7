@@ -26,20 +26,24 @@
                 {{/each}}
         </main>
     </div>
-        <div class="page_block">
+     
             {{> divider }}
-                <footer class="row footer">
+            
+     <footer class="page_block">
+           
+                <div class="row  g-0 footer">
                     <div class="col-3">
                     {{> logo}}
                     <span class="footer_copyright">Copyright 2024</span>
                     </div>  
-                </footer>
                 {{#each footer}} 
                 <div class="col-3">
+                    <strong>
                     <span class="footer_title">{{title}}</span>
+                    </strong>
                      {{> nav list=links isVertical=true }}
                 </div>
                 {{/each}}
-        </div>
-    </div>
-</div>
+                </div>
+    </footer>      
+
