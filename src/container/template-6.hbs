@@ -1,0 +1,64 @@
+
+   
+    <header class="page_block">
+        <div class="header row g-0">
+            <div class="col-3">
+           {{> logo}}
+            </div>
+            <nav class="header_nav col-6">
+                <div class="header_nav_right">
+                   
+                {{> nav list=header }}
+                </div>
+           </nav> 
+        </div>
+         {{> divider }}
+    </header>  
+
+<main class="main">  
+    {{#with info}}
+        <div class="info">
+            <h1 class="info_title">{{title}}</h1>
+        <p class="info_description">{{description}}</p>
+        </div>
+    {{/with}}
+
+    {{#with form}}
+        <form class="form">
+        <div class="form_inputs_list">
+            {{#each inputs}}
+                <input type="{{type}}" class="form_inputs" placeholder="{{placeholder}}" name="{{name}}" id="form_inputs-{{id}}" /> 
+            {{/each}}
+        </div>
+
+        <div class="form_checkbox">
+            <input type="checkbox" name="{{checkbox.name}}" id="{{checkbox.name}}" />
+            <label for="{{chackbox.name}}">{{checkbox.label}}</label>
+        </div>
+        
+        <button type="signin" class="form_button">{{button}}</button>
+             <p class="form_info">{{info}}</p>
+
+              {{> divider }}
+        </form>
+    {{/with}}
+</main>
+
+    <footer class="page_block">
+             {{> divider }}
+                <div class="row  g-0 footer">
+                    <div class="col-3">
+                    {{> logo}}
+                    <span class="footer_copyright">Copyright 2024</span>
+                    </div>  
+                {{#each footer}} 
+                <div class="col-3">
+                    <strong>
+                    <span class="footer_title">{{title}}</span>
+                    </strong>
+                     {{> nav list=links isVertical=true }}
+                </div>
+                {{/each}}
+                </div>
+    </footer>      
+
