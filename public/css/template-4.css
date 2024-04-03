@@ -175,9 +175,9 @@ justify-content: space-between;
 
 .card {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     gap: 12px;
+    width: 30%;
 
    
 }
@@ -216,20 +216,24 @@ justify-content: space-between;
     display: flex;
     justify-content: space-around;
     justify-items: center;
+    flex-direction: column;
+    width: 25%;
 
 }
 
 
 .actions_content {
     display: flex;
-    flex-direction: column;
+    
     gap: 80px;
+    justify-content: center;
 }
 
 .actions_heading {
     font-size: 24px;
     color: #FFFFFF;
     font-weight: 500px;
+
 }
 
 .actions_button {
@@ -252,7 +256,7 @@ justify-content: space-between;
     padding: 24px;
 
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
+
     gap: 12px;
 }
