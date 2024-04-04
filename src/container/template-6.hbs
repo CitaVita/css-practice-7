@@ -12,7 +12,7 @@
                 </div>
            </nav> 
         </div>
-         {{> divider }}
+         {{!-- {{> divider }} --}}
     </header>  
 
 <main class="main">  
@@ -25,25 +25,49 @@
 
     {{#with form}}
         <form class="form">
-        <div class="form_inputs_list">
-            {{#each inputs}}
-                <input type="{{type}}" class="form_inputs" placeholder="{{placeholder}}" name="{{name}}" id="form_inputs-{{id}}" /> 
-            {{/each}}
-        </div>
+            <div class="form_inputs_list">  
+                {{#each inputs}}
+                    <input type="{{type}}" class="form_inputs" placeholder="{{placeholder}}" name="{{name}}" id="form_inputs-{{id}}" /> 
+                {{/each}}
+            </div>
+
 
         <div class="form_checkbox">
             <input type="checkbox" name="{{checkbox.name}}" id="{{checkbox.name}}" />
+            <div></div>
             <label for="{{chackbox.name}}">{{checkbox.label}}</label>
         </div>
-        
-        <button type="signin" class="form_button">{{button}}</button>
-             <p class="form_info">{{info}}</p>
-
-              {{> divider }}
+      
+        <button type="submit" class="form_button">{{button}}</button>
+         {{> divider }}
+             <p class="form_info">{{info}}</p>    
         </form>
     {{/with}}
 </main>
+{{#with updates}}
+    <div class="updates">
+        <h2 class="updates_title">{{title}}</h2>          
+  
+        {{#each list}}
+            <div class="updates_list">
+               <div class="square {{#if @first}}blue{{/if}}{{#if @last}}violet{{/if}}"></div>
+                
+                <strong class="list_nickname">{{nickname}}</strong>
+                <p class="list_desctiption">{{description}}</p>
 
+                
+            </div>
+        {{/each}} 
+
+    
+        
+        {{#with show_all}}
+            <div class="show_all">
+                <a href="{{url}}" class="show_all_link">{{text}}</a>
+            </div>
+        {{/with}}
+    </div>
+{{/with}}
     <footer class="page_block">
              {{> divider }}
                 <div class="row  g-0 footer">

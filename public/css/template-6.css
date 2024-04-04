@@ -127,24 +127,28 @@ justify-content: space-between;
 .main {
     display: flex;
     width: 100%;
-    gap: 24px;
-    /* flex-direction: column;
-   
-
-    width: 100%;
-    /* align-items: flex-start; */
+    align-items: flex-start;
+    gap: 40px;
     
 }
-
 
 .info {
-    
-    flex-grow: 20;
+    max-width: 620px;
+    width: 100%;
+    background-color: #ffff;
+  
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
+
+
 
 .info_title {
     color: #212529;
-    font-size: 36px;
+    font-size: 56px;
     font-weight: 600px;
 
     padding-bottom: 24px;;
@@ -161,8 +165,9 @@ justify-content: space-between;
 
 
 .form {
-    flex-grow: 11;
-    background-color: F8F9FA;
+    max-width: 300px;
+     width: 100%;
+    background-color: #F8F9FA;
     border-radius: 4px;
     box-shadow: 0px 4px 15px  rgba(0, 0, 0, 0.17);
 
@@ -183,5 +188,147 @@ justify-content: space-between;
 
 
 .form_inputs {
-    color: #CED4DA;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    padding: 15px;
+    padding: 12px;
 }
+
+
+.form_inputs::placeholder {
+    font-size: 14px;
+    color:#212529;
+    
+}
+
+
+.form_checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+
+.form_checkbox > input {
+    display: none;
+}
+
+
+.form_checkbox > input ~ div {
+    border: 1px solid #767676;
+    border-radius: 2.5px;
+    height: 10px;
+    width: 10px;
+}
+
+
+.form_ckeckbox > input:checked ~ div {
+    border-color:#212529;
+    background-color: rgb(49, 49, 236);
+}
+
+
+.form_checkbox > label {
+    color: #212529;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form_button {
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #0D6EFD;
+    padding: 12px;
+    border-radius: 4px;
+    transition: opacity 0.7s;
+}
+
+
+.form_button:hover {
+    opacity: 0.7;
+}
+
+.form_button:active {
+    opacity: 0.3;
+}
+
+.divider {
+    border-bottom: 1px solid #CED4DA;
+    padding-bottom: 20px;
+}
+
+
+.form_info {
+    color: #6C757D;
+    font-size: 14px;
+    font-weight: 500px;
+
+    text-align: center;
+}
+
+
+.updates {
+    display: grid;
+    padding: 24px;
+    gap: 24px;
+    width: 100%;
+   
+
+}
+
+
+.updates_title {
+    color: #212529;
+    font-size: 24px;
+    font-weight: 600px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #d3dee9;
+    
+}
+
+.updates_list {
+    align-items: flex-start;
+   
+}
+
+
+.updates_list > div {
+  
+   
+   
+}
+
+.square {
+    width: 32px;
+    height: 32px;
+    background-color: pink;
+  }
+  
+  .blue {
+    background-color: blue;
+  }
+  
+  .violet {
+    background-color: violet;
+  }
+
+.list_nickname {
+    color: #6C757D;
+    font-size: 12.8px;
+    font-weight: 500px;
+    gap: 12px;
+
+    padding-bottom: 12px;
+    
+}
+
+
+.list_desctiption {
+    color: #6C757D;
+    font-size: 16px;
+   
+    padding-bottom: 12px;
+    border-bottom: 1px solid #d3dee9;
+}
+

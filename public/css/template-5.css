@@ -180,9 +180,7 @@ justify-content: space-between;
 .msg {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-
-    padding-bottom: 12px;
+   
     border-bottom: 1px solid #d3dee9;
 
     position: relative;

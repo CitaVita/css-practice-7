@@ -901,7 +901,7 @@ router.get('/template-6', function (req, res) {
           name: "remember"
         },
         button: "Sign in",
-        info: "By clicking Sign up, you agree to the terms of use."
+        info: "By clicking Sign in, you agree to the terms of use."
       },
       updates: {
         title: "Recent updates",
