@@ -44,6 +44,8 @@
         </form>
     {{/with}}
 </main>
+
+ <div class="shadow_line">
 {{#with updates}}
     <div class="updates">
         <h2 class="updates_title">{{title}}</h2>          
@@ -66,8 +68,27 @@
                 <a href="{{url}}" class="show_all_link">{{text}}</a>
             </div>
         {{/with}}
+       </div>
     </div>
 {{/with}}
+
+<div class="card_expirience">
+    {{#with expirience}}
+        <h3 class="expirience_title">{{title}}</h3>
+        <span class="badge_hot">{{badge}}</span>
+
+        {{#each list}}
+        <div class="card_list">
+            <strong class="card_list_name">{{name}}</strong>
+            <p class="card_list_details">{{details}}</p>
+        </div>
+
+        {{/each}}
+
+    {{/with}}
+</div>
+
+
     <footer class="page_block">
              {{> divider }}
                 <div class="row  g-0 footer">
