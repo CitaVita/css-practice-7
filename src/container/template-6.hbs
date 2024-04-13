@@ -74,17 +74,18 @@
 
 <div class="card_expirience">
     {{#with expirience}}
+    <div class="card_title">
         <h3 class="expirience_title">{{title}}</h3>
         <span class="badge_hot">{{badge}}</span>
-
-        {{#each list}}
-        <div class="card_list">
-            <strong class="card_list_name">{{name}}</strong>
-            <p class="card_list_details">{{details}}</p>
+    </div>
+        <div class="list">
+            {{#each list}}
+                <div class="card_list">
+                    <strong class="card_list_name">{{name}}</strong>
+                     <p class="card_list_details">{{details}}</p>
+                </div>
+            {{/each}}
         </div>
-
-        {{/each}}
-
     {{/with}}
 </div>
 
