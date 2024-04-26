@@ -1,0 +1,57 @@
+<header class="page_block">
+    <div class="logo-2">
+        {{> logo-2}}
+    </div>
+    
+{{#with header}}
+
+  <nav class="header_nav">  
+         {{#each links}}
+             <a href="{{url}}" class="nav_links">{{text}}</a>
+        {{/each}}  
+   </nav> 
+
+<div class="header_brandName">
+    <div class="logo-ad col-3">
+        <span class="bage">Ad</span>
+    </div>
+    <div class="ad col-6">
+       {{#with ad}}
+        <a href="{{url}}" class="ad_text">{{text}}</a>    
+    {{/with}} 
+    </div>
+    <div class="user_online">User Online:{{userOnline}}</div>
+</div>
+{{/with}}
+</header>
+
+  
+
+
+
+   
+
+
+
+
+
+
+
+    <footer class="page_block">
+             {{> divider }}
+                <div class="row  g-0 footer">
+                    <div class="col-3">
+                    {{> logo-2}}
+                    <span class="footer_copyright">Copyright 2024</span>
+                    </div>  
+                {{#each footer}} 
+                <div class="col-3">
+                    <strong>
+                    <span class="footer_title">{{title}}</span>
+                    </strong>
+                     {{> nav list=links isVertical=true }}
+                </div>
+                {{/each}}
+                </div>
+    </footer>      
+

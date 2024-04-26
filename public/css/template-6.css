@@ -88,8 +88,8 @@ justify-content: space-between;
 }
 
 .nav_link {
-    color: var(--color-text);
-    font-size: var(--size-d);
+    color: #FFFFfF;
+    font-size: 16px;
     text-decoration: none;
     line-height: 100%;
 }
@@ -293,11 +293,7 @@ justify-content: space-between;
 }
 
 
-.updates_list > div {
-  
-   
-   
-}
+
 
 .square {
     width: 32px;
