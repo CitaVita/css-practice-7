@@ -1,17 +1,22 @@
-<header class="page_block">
-    <div class="logo-2">
+<header class="page_block row g-0">
+    <div class="header_logo col-3">
         {{> logo-2}}
     </div>
     
 {{#with header}}
 
-  <nav class="header_nav">  
+  <nav class="header_nav col-9">
+      <div class="header_nav_right"> 
+
+        {{!-- {{> nav-2 list=links}} --}}
+        <div class="nav {{#if isVertical}}nav_vertical{{else}}nav_inline{{/if}}"></div>
          {{#each links}}
              <a href="{{url}}" class="nav_links">{{text}}</a>
-        {{/each}}  
+        {{/each}}
+        </div>   
    </nav> 
 
-<div class="header_brandName">
+<div class="header_brandName row g-0">
     <div class="logo-ad col-3">
         <span class="bage">Ad</span>
     </div>
@@ -41,7 +46,7 @@
              {{> divider }}
                 <div class="row  g-0 footer">
                     <div class="col-3">
-                    {{> logo-2}}
+                   
                     <span class="footer_copyright">Copyright 2024</span>
                     </div>  
                 {{#each footer}} 

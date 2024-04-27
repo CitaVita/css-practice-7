@@ -49,8 +49,12 @@
 
 /* =================== */
 
+.page_block {
+    padding: 12px;
+}
 
-.logo-2 {
+
+.header_logo {
     font-size: 14px;
     color: #FFFFFF;
     background: #885FFB;
@@ -62,7 +66,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
 }
 
 
@@ -87,7 +91,7 @@ justify-content: space-between;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
 }
 
 .ad {
@@ -96,6 +100,7 @@ justify-content: space-between;
     justify-content: center;
     align-items: flex-start;
 }
+
 
 .user_online {
     display: flex;
@@ -114,28 +119,32 @@ justify-content: space-between;
     font-size: 16px;
     color: #FFFFFF;
     text-decoration: none;
-    
+    transition: opacity 0.7s;
 }
 
 .ad_text:hover {
     text-decoration: underline;
     color: var(--color-primary);
+    opacity: 0.7;
 }
 
-.nav {
+
+
+
+/* .nav {
     display: flex;
 
 }
 
 .nav_vertical {
-    gap: 16px;
     flex-direction: column;
-}
+} */
 
 
-.nav_inline {
+/* .nav_inline {
     gap: 24px;
-}
+} */
+
 
 .nav_links {
     color: #FFFFFF;
@@ -143,16 +152,36 @@ justify-content: space-between;
     text-decoration: none;
     line-height: 100%;
 
+    transition: opacity 0.7s;
+    
+
 }
 
 .nav_links:hover {
     text-decoration: underline;
     color: var(--color-primary);
+    opacity: 0.7;
 } 
 
+/* 
+.nav_vertical > .nav_links {
+    display: block;
+    }
 
+    .nav_inline > .nav_links:not(:last-child) {
+        margin-right: 24px;
+    
+    }
 
+    .nav_vertical > .nav_links:not(:last-child) {
+        margin-bottom: 12px;
+    
+    } */
 
+    .header_nav_right {
+        margin-left: auto;
+        width: fit-content;
+    }
 
 
 
