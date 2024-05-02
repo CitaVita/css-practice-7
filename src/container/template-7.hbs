@@ -9,7 +9,7 @@
       <div class="header_nav_right"> 
 
         {{!-- {{> nav-2 list=links}} --}}
-        <div class="nav {{#if isVertical}}nav_vertical{{else}}nav_inline{{/if}}"></div>
+        {{!-- <div class="nav {{#if isVertical}}nav_vertical{{else}}nav_inline{{/if}}"></div> --}}
          {{#each links}}
              <a href="{{url}}" class="nav_links">{{text}}</a>
         {{/each}}
@@ -30,10 +30,62 @@
 {{/with}}
 </header>
 
-  
+<hero class="hero">
+    {{#with hero}} 
+    <h1 class="hero_title">{{title}}</h1>
+        <p class="hero_description">{{description}}</p>
+        {{#with button}}
+        <div class="hero_button">
+             <a href="{{url}}" class="button_text">{{text}}</a>
+        </div>
+            
+        {{/with}}
+    {{/with}}
+</hero>
+
+<div class="about">
+    {{#with about}}
+        <div class="card_about">
+            <h2 class="about_heading">{{heading}}</h2>
+            <p class="about_info">{{info}}</p>
+        </div>
+    {{/with}}
+</div>
+
+<main class="articles">
+    <div class="title_articles">
+        <h3 class="main_title">Our Articles</h3>
+        <button class="main_button" url="#">View All</button>
+    </div>
+
+        <div class="cards_articles">
+            {{#each articles}}
+                <div class="card_articles">
+                    
+                    <div class="nav {{#if isNew}}true{{else}}nav_inline{{/if}}"></div>
+
+                    <img src="{{photo}}" alt="photo" class="card_img" id="articles-{{id}}"/ >
+                    <h4 class="card_name">{{name}}</h4>
+                    <p class="cards_description">{{description}}</p>
+                    <button class="cards_button" url="#">Read All</button>
+                </div>
+        </div>
+            {{/each}}
+</main>
 
 
 
+
+<footer class="footer row">
+    {{#with footer}}
+        {{#each pages}}
+            <div class="footer_pages">
+                <a href="{{path}}" class="footer_name col-4">{{name}}</a>
+            </div>
+        {{/each}}
+        <div class="footer_copyright col-6">{{copyright}}</div>
+    {{/with}}
+</footer>
    
 
 
@@ -42,21 +94,4 @@
 
 
 
-    <footer class="page_block">
-             {{> divider }}
-                <div class="row  g-0 footer">
-                    <div class="col-3">
-                   
-                    <span class="footer_copyright">Copyright 2024</span>
-                    </div>  
-                {{#each footer}} 
-                <div class="col-3">
-                    <strong>
-                    <span class="footer_title">{{title}}</span>
-                    </strong>
-                     {{> nav list=links isVertical=true }}
-                </div>
-                {{/each}}
-                </div>
-    </footer>      
 
