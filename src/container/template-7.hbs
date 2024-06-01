@@ -58,19 +58,18 @@
         <button class="main_button" url="#">View All</button>
     </div>
 
-        <div class="cards_articles">
+      <div class="card_articles">
             {{#each articles}}
-                <div class="card_articles">
-                    
                     <div class="nav {{#if isNew}}true{{else}}nav_inline{{/if}}"></div>
 
                     <img src="{{photo}}" alt="photo" class="card_img" id="articles-{{id}}"/ >
                     <h4 class="card_name">{{name}}</h4>
                     <p class="cards_description">{{description}}</p>
-                    <button class="cards_button" url="#">Read All</button>
-                </div>
-        </div>
+                   <div>
+                    <a href="#href"class="cards_button">Read All</a>
+                   </div>
             {{/each}}
+            </div>
 </main>
 
 
