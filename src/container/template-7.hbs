@@ -1,13 +1,14 @@
-<header class="page_block row g-0">
-    <div class="header_logo col-3">
-        {{> logo-2}}
-    </div>
+<header class="page_block">
+
     
 {{#with header}}
 
-  <nav class="header_nav col-9">
-      <div class="header_nav_right"> 
-
+  <nav class="header_nav">
+    
+        <div class="header_logo">
+             {{> logo-2}}
+         </div>
+           <div class="header_nav_right"> 
         {{!-- {{> nav-2 list=links}} --}}
         {{!-- <div class="nav {{#if isVertical}}nav_vertical{{else}}nav_inline{{/if}}"></div> --}}
          {{#each links}}
@@ -16,8 +17,8 @@
         </div>   
    </nav> 
 
-<div class="header_brandName row g-0">
-    <div class="logo-ad col-3">
+<div class="header_brandName">
+    <div class="logo-ad">
         <span class="bage">Ad</span>
     </div>
     <div class="ad col-6">
@@ -58,16 +59,22 @@
         <button class="main_button" url="#">View All</button>
     </div>
 
-      <div class="card_articles">
+   <div class="articles_list">
             {{#each articles}}
-                    <div class="nav {{#if isNew}}true{{else}}nav_inline{{/if}}"></div>
-
+               <div class="card_articles">
+            
+            <div class="img_block">
                     <img src="{{photo}}" alt="photo" class="card_img" id="articles-{{id}}"/ >
+                         {{#if isNew}}
+                            <div class="badge_new">NEW</div>
+                         {{/if}}
+              </div>           
                     <h4 class="card_name">{{name}}</h4>
                     <p class="cards_description">{{description}}</p>
 
                    <div>
                         <a href="#href"class="cards_button">Read All</a>
+                   </div>
                    </div>
             {{/each}}
         </div>
@@ -76,7 +83,7 @@
 
 
 
-<footer class="footer row">
+<footer class="footer">
     {{#with footer}}
         {{#each pages}}
             <div class="footer_pages">
